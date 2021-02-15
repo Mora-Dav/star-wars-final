@@ -14,26 +14,24 @@ export default function Personajes() {
     useEffect(()=>{
         fetch ('https://swapi.dev/api/people/')
         .then(res =>res.json())
-        .then(data => {setPeople(data)})
+        .then(data => {setPeople(data.results)})
 
 
     },[])
   
-    console.log(people.results)
-    
-  
-  
-  
+    console.log(people)
   
     return (
 
-       <>
+       <ul>
+       {people.map((people,i)=> 
+       <li>{people.name}</li>)
+       }
 
-       <h1>personaje</h1>
-        <h1>personaje</h1>
-        <h1>personaje</h1>
-        <h1>personaje</h1>
-        </>
+
+
+       </ul>
+
 
 
     )
