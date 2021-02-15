@@ -7,6 +7,10 @@ import {
 }
 from 'react-router-dom';
 
+import Home from "./containers/Home";
+import Personajes from "./containers/Personajes";
+import Personaje from "./containers/Personaje";
+
 
 
 function App() {
@@ -22,30 +26,26 @@ function App() {
             <li>
             <Link to="/characters">Personajes</Link>
             </li>
-            <li>
-            <Link to="/character/:id">Detalle</Link>
-            </li>
+           
           </ul>
           </nav>
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+
+            <Route path="/characters">
+              <Personajes />
+            </Route>
+
+            <Route path="/character/:id">
+              <Personaje />
+            </Route>
+          </Switch>
         </Router>
 
-        <switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-
-          <Route path="/characters">
-            <Personajes />
-          </Route>
-
-          <Route path="/character/:id">
-            <Personaje />
-          </Route>
-        </switch>
       </header>
-      <h1 className="title"> Star Wars  </h1>
-
-      
+     
 
     </div>
   );
