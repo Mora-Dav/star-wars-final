@@ -23,12 +23,25 @@ export default function Personajes() {
   
     return (
 
-       <ul>
-       {people.map((people,i)=> 
-       <li>{people.name}</li>)
+       <ul type='square' >
+
+       {
+           people.length == 0 ?
+
+        <div className="spinner-border" role="status">
+        <span className="visually-hidden">Loading...</span>
+        </div>
+
+            :
+
+
+         people.map((people,i)=> 
+         <Personaje people={people} key={i}/>
+       
+       )
+       //<li><Personaje name={people.name} />
+      // </li>)
        }
-
-
 
        </ul>
 

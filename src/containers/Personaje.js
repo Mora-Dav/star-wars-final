@@ -5,12 +5,13 @@ from 'react-router-dom';
 
 
 
-export default function Personaje ({personaje}) {
+export default function Personaje ({people}) {
     return (
         <>
             <h1>personaje</h1>
             <li>
-                <Link to="/character/:id">Detalle</Link>
+            {people.name}>
+             <Link to="/character/:id">Detalle</Link>
             </li>
         </>
     )
