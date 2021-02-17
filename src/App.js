@@ -39,7 +39,7 @@ function App() {
             </Route>
 
             <Route path="/character/:id">
-              <Personaje />
+              <Personaje id={0} />
             </Route>
           </Switch>
         </Router>

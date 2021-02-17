@@ -3,6 +3,7 @@ import {
     useState
 }
 from 'react';
+import {Link}  from 'react-router-dom'
 
 import Personaje from "./Personaje";
 
@@ -36,11 +37,14 @@ export default function Personajes() {
 
 
          people.map((people,i)=> 
-         <Personaje people={people} key={i}/>
+         <Link to="/character/:id">
+                        
+         <Personaje people={people} key={people.name + i}/>
+        
+        </Link>
        
        )
-       //<li><Personaje name={people.name} />
-      // </li>)
+       
        }
 
        </ul>

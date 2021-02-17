@@ -8,10 +8,16 @@ from 'react-router-dom';
 export default function Personaje ({people}) {
     return (
         <>
-            <h1>personaje</h1>
+            
             <li>
-            {people.name}>
-             <Link to="/character/:id">Detalle</Link>
+                   <h1>
+                   {people.name}
+                   </h1>     
+                  <p>
+                   {people.url}
+                  </p>
+                   
+                    
             </li>
         </>
     )
